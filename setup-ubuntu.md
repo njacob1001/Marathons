@@ -60,3 +60,36 @@ You can confirm if the service is configured to start on boot using the command:
   $ systemctl is-enabled rabbitmq-server.service
   **enabled**
 ```
+## Clone Repositories
+### Install StudioAPP
+```sh
+  $ git clone https://github.com/knmtc/StudioAPI.git
+  $ cd StudioAPI
+  $ sudo npm install --unsafe-perm=true --allow-root --build-from-source
+  $ cd worker_app
+  $ sudo npm install --unsafe-perm=true --allow-root --build-from-source
+  $ node index.js
+```
+### Install Studio
+```sh
+  $ git clone https://github.com/knmtc/studio.git
+  $ sudo npm install --unsafe-perm=true --allow-root --build-from-source
+  $ sudo npm install -g gulp
+  $ gulp
+  $ go to localhost:3000
+  $ User : cto@knomatic.com
+  $ Pass : meg@Copper1981
+```
+### Install FileService
+```sh
+  $ git clone https://github.com/knmtc/FileService.git
+  $ sudo npm install --unsafe-perm=true --allow-root --build-from-source
+  $ node index.js
+```
+### Install WebApp
+```sh
+  $ git clone https://github.com/knmtc/WebApp.git
+  $ sudo npm install --unsafe-perm=true --allow-root --build-from-source
+  $ cp src/config.json.example src/config.json
+  $ npm run dev
+```
